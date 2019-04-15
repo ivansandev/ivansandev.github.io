@@ -7,13 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <title>Sandev</title>
-
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="center">
-    <div id="sections">
+    <div id="sections" class="animated slideInDown delay-1s">
       <div id="leftContainer">
         <svg xmlns="http://www.w3.org/2000/svg" width="350" height="900" viewBox="0 0 350 900"><path class="container" d="M0,0H350V900L0,791.667Z"/></svg>
       </div>
@@ -29,8 +29,36 @@
   <div class="top-right">
     <svg xmlns="http://www.w3.org/2000/svg" width="188" height="120" viewBox="0 0 188 120"><g transform="translate(-1673 -30)"><text class="logo" transform="translate(1772 82)"><tspan x="0" y="0">Ivan</tspan></text><text class="logo2" transform="translate(1673 138)"><tspan x="0" y="0">Sandev</tspan></text></g></svg>
   </div>
-  
 
+  <div id="rightContainerFixed">
+      <div id="todoHeader">
+        <p>To-Do list</p>
+      </div>
+      <div id="todoContent" > <!-- class="animated fadeInRight" -->
+        <div id="todoInputAndButton">
+          <input type="text" name="todoInput" id="todoInput" placeholder="Enter to-do...">
+          <button id="clearTodoButton">Clear</button>
+        </div>
+        <ul id="todoContainer">
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+        </ul>
+      </div>
+  </div>
+  
+  <div id="socialMedia">
+    <div id="Github">
+      <img src="images/github.png" alt="github logo">
+      <p>ivansandev</p>
+    </div>
+    <div id="Instagram">
+      <img src="images/instagram.png" alt="instagram logo">
+      <p>sandevv</p>
+    </div>
+  </div>
+  
 
   <script src="js/script.js"></script>
 </body>
