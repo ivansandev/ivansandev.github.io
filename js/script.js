@@ -1,4 +1,5 @@
-///////////// To-Do list
+/*************** To-Do list ***************/
+
 const todoInput = document.getElementById("todoInput");
 const ul = document.getElementById("todoContainer");
 // const clearButton = document.getElementById("clearButton");
@@ -13,14 +14,9 @@ const addTodoOnKeypress = event => {
     }
 }
 
-// const clearTodo = () => {
-    
-// }
-
 todoInput.addEventListener("keypress", addTodoOnKeypress);
-// clearButton.addEventListener("click", clearTodo);
 
-
+/*************** To-Do animation ***************/
 const todoHeaderClick = document.getElementById("todoHeader");
 const todoContent = document.getElementById("todoContent");
 var todoVisible = 0;
@@ -29,20 +25,22 @@ const showTodoContainer = () => {
 
     if (!todoVisible) {
         todoHeaderClick.classList.add("animated", "pulse");
-        todoContent.classList.remove("animated", "fadeOutRight", "fast");
-        todoContent.classList.add("animated", "fadeInRight", "fast");
+        todoContent.classList.remove("animated", "fadeOutRight", "faster");
+        todoContent.classList.add("animated", "fadeInRight", "faster");
         todoContent.style.visibility = "visible";
         todoVisible = 1;
     }
     else {
         todoHeaderClick.classList.remove("animated", "pulse");
-        todoContent.classList.remove("animated", "fadeInRight", "fast");
-        todoContent.classList.add("animated", "fadeOutRight", "fast");
+        todoContent.classList.remove("animated", "fadeInRight", "faster");
+        todoContent.classList.add("animated", "fadeOutRight", "faster");
         console.log("test");
         
         // todoContent.style.visibility = "visible";
         todoVisible = 0;
     }
 }
-
 todoHeaderClick.addEventListener("click", showTodoContainer);
+
+/*************** # ***************/
+

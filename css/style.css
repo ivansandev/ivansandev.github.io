@@ -69,6 +69,8 @@ body {
 
 .center {
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
 }
 
@@ -77,32 +79,72 @@ body {
   top: 16px;
   right: 30px;
 }
-
+span {
+  font-weight: 600;
+}
 /*
 --------------------
   Middle section
 --------------------
 */
-
+.fixSections {
+  position: relative;
+  display:flex;
+}
 #sections {
   display: flex;
   flex-flow: nowrap row;
   width: 65%;
   justify-content: space-between;
+}
+
+#leftContainer:hover, #middleContainer:hover, #rightContainer:hover {
+  transform: scale(1.05) translateY(18px) ;
+}
+
+#leftContainer, #middleContainer, #rightContainer {
   text-align: center;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+
+}
+
+.alignSectionContent {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.alignSectionContent h1 {
+  margin: 12px 0 24px 0;
+}
+.alignSectionContent p {
+  margin-top: 12px;
+  padding: 0 14px;
+}
+
+#leftContainer div h1 {
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center
 }
 
 #sections div svg {
   width: 300px;
   height: 100%;
 }
+
 #sections div:nth-child(2) svg {
-  width: 330px;
+  width: 342px;
   height: 100%;
 }
 
 .container {
-  fill: #51cccc;
+  fill: #2C7C89;
 }
 
 /*
@@ -115,10 +157,12 @@ body {
   fill: #fff;
   font-size: 54px;
   transition: all ease-in-out 0.5s;
+  
 }
 .logo:hover, .logo2:hover {
   opacity: 0.8;
   transform: scale(1.1);
+  fill: #69EBFF;
 }
 .logo {
   font-family: HelveticaNeue-Thin, Helvetica Neue;
@@ -139,19 +183,14 @@ body {
   position: fixed;
   right: 0px;
   top: 12em;
-  /* transform: translate(40px); */
-}
-#rightContainerFixed:hover {
-  /* transform: translate(0px); */
 }
 
-#rightContainerFixed #todoHeader {
-  width: 250px;
+#todoHeader {
+  width: 220px;
   height: 45px;
-  padding: 8px 0 0 32px;
-  border-radius: 50px 0 0 0px;
-  border: 5px solid #51cccc;
-  background: #51cccc;
+  padding: 12px 0 0 36px;
+  /* border: 5px solid #2C7C89; */
+  background: #D48242;
   cursor: pointer;
   font-size: 18px;
   letter-spacing: 1px;
@@ -160,7 +199,7 @@ body {
 #rightContainerFixed #todoContent {
   background: white;
   height: 300px;
-  width: 250px;
+  width: 220px;
   align-content: left;
   color: black;
   border-radius: 0 0 0 40px;
@@ -178,7 +217,6 @@ body {
   padding: 3px 6px;
   border-radius: 6px;
   margin: 8px 0 10px 24px;
-  
 }
 
 /*
