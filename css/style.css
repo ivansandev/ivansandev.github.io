@@ -188,15 +188,20 @@ span {
 #todoHeader {
   width: 220px;
   height: 45px;
-  padding: 12px 0 0 36px;
   /* border: 5px solid #2C7C89; */
+}
+.navHeader {
+  padding: 12px 0 12px 36px;
   background: #D48242;
   cursor: pointer;
   font-size: 18px;
   letter-spacing: 1px;
+  margin-bottom: 2px;
 }
 
 #rightContainerFixed #todoContent {
+  float:right;
+  position: fixed;
   background: white;
   height: 300px;
   width: 220px;
