@@ -22,7 +22,6 @@ const todoContent = document.getElementById("todoContent");
 var todoVisible = 0;
 
 const showTodoContainer = () => {
-
     if (!todoVisible) {
         todoHeaderClick.classList.add("animated", "pulse");
         todoContent.classList.remove("animated", "fadeOutRight", "faster");
@@ -34,13 +33,16 @@ const showTodoContainer = () => {
         todoHeaderClick.classList.remove("animated", "pulse");
         todoContent.classList.remove("animated", "fadeInRight", "faster");
         todoContent.classList.add("animated", "fadeOutRight", "faster");
-        console.log("test");
-        
-        // todoContent.style.visibility = "visible";
         todoVisible = 0;
     }
 }
+
 todoHeaderClick.addEventListener("click", showTodoContainer);
 
-/*************** # ***************/
+/*************** Sign in ***************/
 
+let signInForm = document.getElementById("signInForm");
+
+const goToLoginScreen = () => window.location.replace("sign.html");
+
+signInForm.addEventListener("click", goToLoginScreen)

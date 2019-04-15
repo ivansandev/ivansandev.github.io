@@ -118,9 +118,11 @@ span {
   right: 0;
   margin: 0 auto;
 }
+
 .alignSectionContent h1 {
   margin: 12px 0 24px 0;
 }
+
 .alignSectionContent p {
   margin-top: 12px;
   padding: 0 14px;
@@ -190,6 +192,7 @@ span {
   height: 45px;
   /* border: 5px solid #2C7C89; */
 }
+
 .navHeader {
   padding: 12px 0 12px 36px;
   background: #D48242;
@@ -197,6 +200,11 @@ span {
   font-size: 18px;
   letter-spacing: 1px;
   margin-bottom: 2px;
+  transition: all ease-in-out 0.2s;
+}
+
+.navHeader:hover {
+  transform: scale(1.1);
 }
 
 #rightContainerFixed #todoContent {
@@ -210,6 +218,7 @@ span {
   border-radius: 0 0 0 40px;
   visibility: hidden;
 }
+
 #todoInputAndButton button{
   padding: 4px;
 }
@@ -249,4 +258,37 @@ span {
 #Github, #Instagram {
   display: flex;
   flex-flow: nowrap row;
+}
+
+/*
+--------------------
+  Log in form
+--------------------
+*/
+
+#logInForm {
+  margin: 72px 0 48px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 360px;
+}
+
+#logInForm p {
+  font-size: 20px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+#logInForm button {
+  padding: 14px 0;
+  border-radius: 14px;
+  margin: 3px 0;
+}
+
+#logInForm input {
+  padding: 4px 12px;
+  border-radius: 14px;
+  margin: 3px 0;
 }
