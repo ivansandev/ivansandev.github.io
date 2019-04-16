@@ -7,6 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <title>Sandev</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,19 +19,33 @@
 <body>
   <!-- Middle containers -->
   <div class="center">
-    <div id="sections" class="animated slideInDown delay-1s">
+    <div id="sections" class="animated slideInDown">
       <!-- class="animated slideInDown" -->
       <div id="leftContainer" class="fixSections ">
-        <svg xmlns="http://www.w3.org/2000/svg" width="350" height="900" viewBox="0 0 350 900"><path class="container" d="M0,0H350V900L0,791.667Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="350" height="900" viewBox="0 0 350 900">
+          <style type="text/css">
+            container {
+              fill: url(#MyGradient)
+            }
+          </style>
+          <defs>
+            <linearGradient id="header-shape-gradient" x2="0.35" y2="1">
+              <stop offset="40%" stop-color="var(--color-stop)" />
+              <stop offset="100%" stop-color="var(--color-bot)" />
+            </linearGradient>
+          </defs>
+          <path class="container" d="M0,0H350V900L0,791.667Z" />
+        </svg>
         <div class="center alignSectionContent">
           <h1 class="">Education</h1>
-          <p>I've finished computer software and automation in the high school <br><span>"Goso Vikentiev"</span></p>
+          <p>I've finished computer software and automation in the high school <br><span>Goso Vikentiev</span></p>
           <p>I am currently studying Software Engineering at <br><span>Technical University - Bulgaria</span></p>
         </div>
       </div>
 
       <div id="middleContainer" class="fixSections">
-        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="900" viewBox="0 0 400 900"><path class="container" d="M0,0H400V900L200,791.667,0,900Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="900" viewBox="0 0 400 900">
+          <path class="container" d="M0,0H400V900L200,791.667,0,900Z" /></svg>
         <div class="center alignSectionContent">
           <h1 class="">Work</h1>
           <p>I've been working with <span>C & JavaScript</span> for the past 2 years. <br>
@@ -36,10 +55,13 @@
       </div>
 
       <div id="rightContainer" class="fixSections">
-        <svg xmlns="http://www.w3.org/2000/svg" width="350" height="900" viewBox="0 0 350 900"><path class="container" d="M0,0H350V791.667L0,900Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="350" height="900" viewBox="0 0 350 900">
+          <path class="container" d="M0,0H350V791.667L0,900Z" /></svg>
         <div class="center alignSectionContent">
           <h1 class="">Lorem</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias ipsam illum, totam nesciunt aliquam magni eaque natus veniam dolore accusantium quidem impedit culpa sapiente nemo consectetur necessitatibus suscipit, nisi exercitationem!</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias ipsam illum, totam nesciunt aliquam magni
+            eaque natus veniam dolore accusantium quidem impedit culpa sapiente nemo consectetur necessitatibus
+            suscipit, nisi exercitationem!</p>
         </div>
       </div>
     </div>
@@ -47,30 +69,40 @@
 
   <!-- Logo -->
   <div class="top-right">
-    <svg xmlns="http://www.w3.org/2000/svg" width="188" height="120" viewBox="0 0 188 120"><g transform="translate(-1673 -30)"><text class="logo" transform="translate(1772 82)"><tspan x="0" y="0">Ivan</tspan></text><text class="logo2" transform="translate(1673 138)"><tspan x="0" y="0">Sandev</tspan></text></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="188" height="120" viewBox="0 0 188 120">
+      <g transform="translate(-1673 -30)"><text class="logo" transform="translate(1772 82)">
+          <tspan x="0" y="0">Ivan</tspan>
+        </text><text class="logo2" transform="translate(1673 138)">
+          <tspan x="0" y="0">Sandev</tspan>
+        </text></g>
+    </svg>
   </div>
 
   <!-- Right nav bar -->
   <div id="rightContainerFixed">
-      <div id="todoHeader" class="navHeader">
-        <p>To-Do list</p>
+    <div id="todoHeader" class="navHeader">
+      <p>To-Do list</p>
+    </div>
+    <div id="todoContent">
+      <div id="todoInputAndButton">
+        <input type="text" name="todoInput" id="todoInput" placeholder="Enter to-do...">
       </div>
-      <div id="todoContent"> <!-- class="animated fadeInRight" -->
-        <div id="todoInputAndButton">
-          <input type="text" name="todoInput" id="todoInput" placeholder="Enter to-do...">
-        </div>
-        <ul id="todoContainer">
-          <li>To-Do 1</li>
-          <li>To-Do 2</li>
-          <li>To-Do 3</li>
-        </ul>
-      </div>
+      <ul id="todoContainer">
+        <li>To-Do 1</li>
+        <li>To-Do 2</li>
+        <li>To-Do 3</li>
+      </ul>
+    </div>
 
-      <div id="signInForm"class="navHeader">
-        <p>Sign in form</p>
-      </div>
+    <div id="signInNav" class="navHeader">
+      <p>Sign in form</p>
+    </div>
+
+    <div id="photographyNav" class="navHeader">
+      <p>Photography</p>
+    </div>
   </div>
-  
+
   <!-- Social media links -->
   <div id="socialMedia">
     <div id="Github">
@@ -82,7 +114,7 @@
       <p>sandevv</p>
     </div>
   </div>
-  
+
 
   <script src="js/script.js"></script>
 </body>

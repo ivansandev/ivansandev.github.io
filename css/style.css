@@ -84,13 +84,15 @@ span {
 }
 /*
 --------------------
-  Middle section
+  Main content
 --------------------
 */
+
 .fixSections {
   position: relative;
   display:flex;
 }
+
 #sections {
   display: flex;
   flex-flow: nowrap row;
@@ -145,9 +147,27 @@ span {
   height: 100%;
 }
 
-.container {
-  fill: #2C7C89;
+#sections span {
+  font-size: 105%;
+  color: rgb(255, 143, 58);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
+
+.container {
+  fill: url(#header-shape-gradient) #fff;
+}
+
+#header-shape-gradient {
+  --color-stop: #42C0D4;
+  --color-bot: rgb(36, 104, 114);
+}
+
+#header-shape-gradient {
+  --color-stop: #2C7C89;;
+  --color-bot: rgba(36, 104, 114,0.3);
+}
+
+
 
 /*
 --------------------
@@ -181,23 +201,11 @@ span {
 --------------------
 */
 
-#rightContainerFixed {
-  position: fixed;
-  right: 0px;
-  top: 12em;
-}
-
-#todoHeader {
-  width: 220px;
-  height: 45px;
-  /* border: 5px solid #2C7C89; */
-}
-
 .navHeader {
   padding: 12px 0 12px 36px;
   background: #D48242;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 1px;
   margin-bottom: 2px;
   transition: all ease-in-out 0.2s;
@@ -205,6 +213,14 @@ span {
 
 .navHeader:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 4px black;
+}
+
+#rightContainerFixed {
+  position: fixed;
+  right: 0px;
+  top: 12em;
+  width: 220px;
 }
 
 #rightContainerFixed #todoContent {
@@ -219,16 +235,13 @@ span {
   visibility: hidden;
 }
 
-#todoInputAndButton button{
-  padding: 4px;
-}
-
 #rightContainerFixed #todoContent ul {
   margin: 0px 6px 6px 40px;
 }
 
 #rightContainerFixed #todoContent input {
   padding: 3px 6px;
+  width: 170px;
   border-radius: 6px;
   margin: 8px 0 10px 24px;
 }
@@ -253,7 +266,6 @@ span {
   padding: 7px 0 0 6px;
   font-size: 14px;
 }
-
 
 #Github, #Instagram {
   display: flex;
@@ -282,13 +294,35 @@ span {
 }
 
 #logInForm button {
-  padding: 14px 0;
-  border-radius: 14px;
-  margin: 3px 0;
+  background: #D48242;
+  font-size: 14px;
+  color: white;
+  border: 0;
+  transition: background ease-in-out 0.2s;
+  margin: 0;
+  /* transition: all ease-out 0s; */
+}
+
+#logInForm button:hover {
+  background: #87440F;
+}
+
+#logInForm #signInButton {
+  background: #D48242;
+  border: 0;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+#logInForm #signInButton:hover {
+  background: #87440F;
 }
 
 #logInForm input {
-  padding: 4px 12px;
-  border-radius: 14px;
-  margin: 3px 0;
+  margin: 0 0 0 0 ;
+}
+
+.modalInfoLogin {
+  color: black;
 }

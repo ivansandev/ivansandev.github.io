@@ -1,0 +1,13 @@
+/* Color Theme Swatches in Hex */
+.Portfolio-Website-1-hex { color: #2C7C89; }
+.Portfolio-Website-2-hex { color: #69EBFF; }
+.Portfolio-Website-3-hex { color: #42C0D4; }
+.Portfolio-Website-4-hex { color: #87440F; }
+.Portfolio-Website-5-hex { color: #D48242; }
+
+/* Color Theme Swatches in RGBA */
+.Portfolio-Website-1-rgba { color: rgba(44, 124, 137, 1); }
+.Portfolio-Website-2-rgba { color: rgba(105, 235, 255, 1); }
+.Portfolio-Website-3-rgba { color: rgba(66, 192, 212, 1); }
+.Portfolio-Website-4-rgba { color: rgba(135, 68, 15, 1); }
+.Portfolio-Website-5-rgba { color: rgba(212, 130, 66, 1); }

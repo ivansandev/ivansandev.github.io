@@ -39,10 +39,12 @@ const showTodoContainer = () => {
 
 todoHeaderClick.addEventListener("click", showTodoContainer);
 
-/*************** Sign in ***************/
+/*************** Nav Links ***************/
 
-let signInForm = document.getElementById("signInForm");
+let signInNav = document.getElementById("signInNav");
+const goToLoginScreen = () => window.location.assign("sign.html");
+signInForm.addEventListener("click", goToLoginScreen);
 
-const goToLoginScreen = () => window.location.replace("sign.html");
-
-signInForm.addEventListener("click", goToLoginScreen)
+let photographyNav = document.getElementById("photographyNav");
+const goToPhotography = () => window.location.assign("photography.html");
+photographyNav.addEventListener("click", goToPhotography);
