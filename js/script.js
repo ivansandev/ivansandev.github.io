@@ -41,9 +41,13 @@ todoHeaderClick.addEventListener("click", showTodoContainer);
 
 /*************** Nav Links ***************/
 
+let logoHomeButton = document.getElementById("logoHome");
+const goToHome = () => window.location.assign("index.html");
+logoHomeButton.addEventListener("click", goToHome);
+
 let signInNav = document.getElementById("signInNav");
 const goToLoginScreen = () => window.location.assign("sign.html");
-signInForm.addEventListener("click", goToLoginScreen);
+signInNav.addEventListener("click", goToLoginScreen);
 
 let photographyNav = document.getElementById("photographyNav");
 const goToPhotography = () => window.location.assign("photography.html");
