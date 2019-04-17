@@ -60,6 +60,16 @@ html, input, select, textarea, button, a {
   General
 --------------------
 */
+a {
+  color: white;
+  text-decoration: none;
+  transition: all ease-in-out 0.2s;
+}
+
+a:hover {
+  color: #69EBFF;
+  cursor: pointer;
+}
 
 .bg {
   /* height: 100%; */
@@ -285,9 +295,17 @@ span {
   bottom: 24px;
   right: 24px;
 }
-#socialMedia p {
-  padding: 7px 0 0 6px;
+
+#socialMedia a {
+  padding: 4px 0 0 6px;
   font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+#socialMedia a:hover {
+  color: #69EBFF;
+  cursor: pointer;
 }
 
 #Github, #Instagram {
@@ -352,6 +370,36 @@ span {
 
 /*
 --------------------
-  
+  Images container
 --------------------
 */
+
+#imagesContainer {
+  width: 85%;
+  height: 100%;
+  /* border:5px solid white; */
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+
+}
+
+#imagesContainer img {
+  margin: 24px;
+  transition: all ease-in-out 0.2s;
+}
+
+#imagesContainer a img:hover {
+  transform: scale(1.1);
+}
+
+#imagesContainer a:nth-child(2) img:hover, #imagesContainer a:nth-child(5) img:hover {
+  transform: scale(1.1);
+}
+#imagesContainer a:nth-child(1) img:hover, #imagesContainer a:nth-child(4) img:hover{
+  transform: scale(1.1) rotate(-5deg);
+}
+#imagesContainer a:nth-child(3) img:hover, #imagesContainer a:nth-child(6) img:hover{
+  transform: scale(1.1) rotate(5deg);
+}
+
