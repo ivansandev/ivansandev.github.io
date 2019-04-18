@@ -52,4 +52,3 @@ signInNav.addEventListener("click", goToLoginScreen);
 let photographyNav = document.getElementById("photographyNav");
 const goToPhotography = () => window.location.assign("photography.html");
 photographyNav.addEventListener("click", goToPhotography);
-
