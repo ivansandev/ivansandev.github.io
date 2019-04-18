@@ -110,13 +110,6 @@ span {
   justify-content: space-between;
 }
 
-#sections li {
-  list-style: disc;
-  padding: 0 0 0 5px;
-  margin: 0 0 0 50px;
-  text-align: left;
-}
-
 #leftContainer, #middleContainer, #rightContainer {
   text-align: center;
   position: relative;
@@ -140,18 +133,28 @@ span {
   left: 0;
   right: 0;
   margin: 0 auto;
+  padding: 20px;
+  font-weight: 300;
+}
+
+.alignInSVGContent li {
+  list-style: disc;
+  padding: 0 0 0 5px;
+  margin: 0 0 0 75px;
+  text-align: left;
 }
 
 .alignInSVGContent h1 {
-  margin: 12px 0 24px 0;
+  margin: 12px 0 60px 0;
+  font-weight: 600;
 }
 
 .alignInSVGContent h3 {
-  font-size: 18px;
+  font-size: 14px;
   text-align: left;
   margin-left: 40px;
-  padding-bottom: 18px;
-  font-weight: 400;
+  padding-bottom: 6px;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -159,6 +162,10 @@ span {
   margin-bottom: 12px;
   padding: 0 14px;
   font-weight: 300;
+}
+
+.alignInSVGContent ul {
+  margin-bottom: 32px;
 }
 
 #sections div svg {
