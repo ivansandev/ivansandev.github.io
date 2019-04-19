@@ -242,7 +242,7 @@ span {
   fill: #fff;
   font-size: 54px;
   transition: all ease-in-out 0.2s;
-  
+
 }
 .logo:hover, .logo2:hover {
   opacity: 0.8;
@@ -433,4 +433,3 @@ span {
 #imagesContainer a:nth-child(3) img:hover, #imagesContainer a:nth-child(6) img:hover{
   transform: scale(1.07) rotate(5deg);
 }
-
