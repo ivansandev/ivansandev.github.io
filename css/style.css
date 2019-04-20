@@ -410,6 +410,7 @@ span {
   position: relative;
   align-content: center;
   height: 100%;
+  width: 85%;
 }
 
 #imagesContainer {
