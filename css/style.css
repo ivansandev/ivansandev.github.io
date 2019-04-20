@@ -4,7 +4,7 @@
 --------------------
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,500|Roboto|Roboto+Mono|Roboto+Condensed:300,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500|Roboto|Roboto+Mono|Roboto+Condensed:300,700');
 
 /*
 --------------------
@@ -418,7 +418,6 @@ span {
   flex-flow: wrap row;
   justify-content: center;
   align-content: center;
-
 }
 
 #imagesContainer a img {
