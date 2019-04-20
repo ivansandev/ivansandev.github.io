@@ -404,16 +404,24 @@ span {
 --------------------
 */
 
+.alignImagesCenter {
+  display: flex;
+  flex-flow: nowrap row;
+  position: relative;
+  align-content: center;
+  height: 100%;
+}
+
 #imagesContainer {
   width: 85%;
-  /* border:5px solid white; */
   display: flex;
   flex-flow: wrap row;
   justify-content: center;
+  align-content: center;
 
 }
 
-#imagesContainer img {
+#imagesContainer a img {
   margin: 24px;
   transition: all ease-in-out 0.2s;
 }
