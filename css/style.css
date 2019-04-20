@@ -117,7 +117,7 @@ span {
 #sections {
   display: flex;
   flex-flow: nowrap row;
-  width: 65%;
+  width: 65vw; /* control space between main sections */
   justify-content: space-between;
 }
 
@@ -410,11 +410,11 @@ span {
   position: relative;
   align-content: center;
   height: 100%;
-  width: 85%;
+  width: 85vw;
 }
 
 #imagesContainer {
-  width: 85%;
+  border: 1px solid white;
   display: flex;
   flex-flow: wrap row;
   justify-content: center;
