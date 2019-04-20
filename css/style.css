@@ -4,7 +4,7 @@
 --------------------
 */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,500|Roboto|Roboto+Mono|Roboto+Condensed:300,700');
 
 /*
 --------------------
@@ -68,6 +68,18 @@ html, input, select, textarea, button, a {
   General
 --------------------
 */
+
+body {
+  background-image: url("/images/Background.png");
+  /* no-repeat fixed content-boxno-repeat fixed content-box */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  /* "Helvetica Neue",  */
+  font-family: 'Montserrat', sans-serif;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -78,16 +90,6 @@ a:hover {
   color: #69EBFF;
   cursor: pointer;
   text-decoration: none;
-}
-
-body {
-  background-image: url("/images/Background.png");
-  /* no-repeat fixed content-boxno-repeat fixed content-box */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  font-family: "Helvetica Neue";
 }
 
 .center {
@@ -190,11 +192,8 @@ span {
 }
 
 .alignInSVGContent span {
-  /* font-family: 'Times New Roman', Times, serif; */
-  /* font-family: 'Roboto Mono', monospace; */
   font-size: 16px;
   font-weight: 800;
-  /* text-transform: uppercase; */
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   padding: 4px 8px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
@@ -205,7 +204,6 @@ span {
   padding: 0;
   box-shadow: none;
   text-transform: none;
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size:16px;
   letter-spacing: 0;
@@ -242,24 +240,22 @@ span {
   fill: #fff;
   font-size: 54px;
   transition: all ease-in-out 0.2s;
-
+  font-family: 'Montserrat', sans-serif;
 }
 .logo:hover, .logo2:hover {
   opacity: 0.8;
-  transform: scale(1.1);
   fill: #69EBFF;
 }
 .logo {
-  font-family: HelveticaNeue-Thin, Helvetica Neue;
   font-weight: 200;
 }
 .logo2 {
-  font-family: HelveticaNeue-Medium, Helvetica Neue;
   font-weight: 500;
 }
 #logoHome {
   cursor: pointer;
 }
+
 /*
 --------------------
   To-Do list
@@ -274,6 +270,7 @@ span {
   letter-spacing: 1px;
   margin-bottom: 2px;
   transition: all ease-in-out 0.2s;
+  font-family: 'Roboto Mono';
 }
 
 .navHeader:hover {
@@ -285,7 +282,8 @@ span {
   position: fixed;
   right: 0px;
   top: 12em;
-  width: 220px;
+  width: 240px;
+  font-weight: 400;
 }
 
 #rightContainerFixed #todoContent {
@@ -293,7 +291,7 @@ span {
   position: fixed;
   background: white;
   height: 300px;
-  width: 220px;
+  width: 240px;
   align-content: left;
   color: black;
   border-radius: 0 0 0 40px;
