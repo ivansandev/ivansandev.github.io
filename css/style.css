@@ -71,6 +71,7 @@ html, input, select, textarea, button, a {
 
 body {
   background-image: url("/images/Background.png");
+  
   /* no-repeat fixed content-boxno-repeat fixed content-box */
   background-position: center;
   background-repeat: no-repeat;
@@ -78,6 +79,17 @@ body {
   color: white;
   /* "Helvetica Neue",  */
   font-family: 'Montserrat', sans-serif;
+}
+
+.bg {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  opacity: 0.1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  /* z-index: -1; */
+  top: 0;
+  left: 0;
 }
 
 a {
