@@ -414,7 +414,6 @@ span {
 }
 
 #imagesContainer {
-  border: 1px solid white;
   display: flex;
   flex-flow: wrap row;
   justify-content: center;
