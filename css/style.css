@@ -79,6 +79,8 @@ body {
   color: white;
   /* "Helvetica Neue",  */
   font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .bg {
@@ -90,6 +92,11 @@ body {
   /* z-index: -1; */
   top: 0;
   left: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 a {
@@ -116,6 +123,7 @@ a:hover {
   top: 16px;
   right: 30px;
 }
+
 span {
   font-weight: 600;
 }
