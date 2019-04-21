@@ -23,6 +23,7 @@ function signIn() {
     }
 }
 function signInKeypress(event) {
+    debugger;
     var usernameRequest = document.getElementById("username").value;
     var passwordRequest = document.getElementById("password").value;
     if (event.which === 13) {
