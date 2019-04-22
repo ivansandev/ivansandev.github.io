@@ -278,7 +278,7 @@ span {
 
 /*
 --------------------
-  To-Do list
+  Navbar
 --------------------
 */
 
@@ -457,4 +457,82 @@ span {
 }
 #imagesContainer a:nth-child(3) img:hover, #imagesContainer a:nth-child(6) img:hover{
   transform: scale(1.07) rotate(5deg);
+}
+
+@media all and (max-width: 1200px) {
+  /* Sections */
+  #sections {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    position: relative;
+    top: 140px;
+  }
+  .alignInSVGContent {
+    position: relative;
+    border: 5px solid white;
+  }
+  .alignInSVGContent h1 {
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+  .alignInSVGContent p {
+    font-size: 14px;
+  }
+
+  .hideSectionBackground {
+    visibility: hidden;
+    z-index: -1000;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .fixSections {
+    position: fixed;
+    top: 0;
+  }
+  #sections div {
+    
+  }
+  /* Navbar */
+  #rightContainerFixed {
+    left: 20px;
+    top: 20px;
+    width: 200px;
+  }
+  .navHeader {
+    padding: 6px 0 6px 0px;
+    text-align: center;
+  }
+
+
+  /* Sign in form */
+  #logInForm {
+    margin: 180px 0 0 0;
+  }
+
+  /* Photography */
+  .alignImagesCenter {
+    align-content: left;
+    width: 100vw;
+    height: 70vh;
+    top: 150px;
+    position: relative;
+    border: 5px solid white;
+  }
+
+  #imagesContainer {
+    display: flex;
+    flex-flow: wrap row;
+    justify-items: 
+  }
+
+  #imagesContainer a img {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+  }
+
 }
