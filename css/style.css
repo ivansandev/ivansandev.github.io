@@ -70,12 +70,6 @@ html, input, select, textarea, button, a {
 */
 
 body {
-  background-image: url("/images/Background.png");
-  
-  /* no-repeat fixed content-boxno-repeat fixed content-box */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: white;
   /* "Helvetica Neue",  */
   font-family: 'Montserrat', sans-serif;
@@ -83,9 +77,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bgImage {
+  background-image: url("/images/Background.png");
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  /* z-index: -1; */
+  top: 0;
+  left: 0;
+}
+
 .bg {
+  opacity: 0.3;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-  opacity: 0.1;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -119,7 +124,7 @@ a:hover {
 }
 
 .top-right {
-  position: fixed;
+  position: absolute;
   top: 16px;
   right: 30px;
 }
@@ -298,6 +303,10 @@ span {
   box-shadow: 0 0 4px black;
 }
 
+.mobileNavButton {
+  display: none;
+}
+
 #rightContainerFixed {
   position: fixed;
   right: 0px;
@@ -316,6 +325,7 @@ span {
   color: black;
   border-radius: 0 0 0 40px;
   visibility: hidden;
+  z-index: 1;
 }
 
 #rightContainerFixed #todoContent ul {
@@ -341,7 +351,7 @@ span {
 }
 
 #socialMedia {
-  position: fixed;
+  position: absolute;
   bottom: 24px;
   right: 24px;
 }
@@ -466,11 +476,14 @@ span {
     flex-flow: wrap column;
     justify-content: center;
     position: relative;
-    top: 140px;
+    top: 150px;
   }
   .alignInSVGContent {
     position: relative;
-    border: 5px solid white;
+    background-color: #2C7C89;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   }
   .alignInSVGContent h1 {
     margin-bottom: 0;
@@ -481,14 +494,9 @@ span {
   }
 
   .hideSectionBackground {
-    visibility: hidden;
-    z-index: -1000;
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: none;
   }
+
   .fixSections {
     position: fixed;
     top: 0;
@@ -497,16 +505,59 @@ span {
     
   }
   /* Navbar */
-  #rightContainerFixed {
-    left: 20px;
-    top: 20px;
-    width: 200px;
+
+  /*
+  --------------------
+    BUTTON
+  --------------------
+  */
+  .containerMenuButton {
+    display: inline-block;
+    cursor: pointer;
   }
-  .navHeader {
-    padding: 6px 0 6px 0px;
-    text-align: center;
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.4); */
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  /*
+  --------------------
+    BUTTON
+  --------------------
+  */
+
+  #rightContainerFixed {
+    top: 25px;
+    left: 25px;
+    width: 200px;
+    position: absolute;
   }
 
+  .navHeader {
+    padding: 6px 0 6px 0px;
+    margin: 0 0 1px 0;
+    position: sticky;
+    position: -webkit-sticky;
+    text-align: center;
+    visibility: hidden;
+  }
 
   /* Sign in form */
   #logInForm {
@@ -520,13 +571,11 @@ span {
     height: 70vh;
     top: 150px;
     position: relative;
-    border: 5px solid white;
   }
 
   #imagesContainer {
     display: flex;
     flex-flow: wrap row;
-    justify-items: 
   }
 
   #imagesContainer a img {
@@ -534,5 +583,17 @@ span {
     height: 200px;
     margin: 0;
   }
+
+  /* Social media */
+  #socialMedia {
+    display:none;
+    width: max-content;
+    margin: 0;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    border:2px solid white;
+  }
+
 
 }

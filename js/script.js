@@ -5,7 +5,7 @@ const ul = document.getElementById("todoContainer");
 // const clearButton = document.getElementById("clearButton");
 
 const addTodoOnKeypress = event => {
-    if ((event.which) === 13 && (todoInput.value.length>0)) {
+    if ((event.which) === 13 && (todoInput.value.length > 0)) {
         let li = document.createElement("li");
         li.appendChild(document.createTextNode(todoInput.value));
         ul.appendChild(li);
@@ -17,6 +17,7 @@ const addTodoOnKeypress = event => {
 todoInput.addEventListener("keypress", addTodoOnKeypress);
 
 /*************** To-Do animation ***************/
+
 const todoHeaderClick = document.getElementById("todoHeader");
 const todoContent = document.getElementById("todoContent");
 var todoVisible = 0;
@@ -52,3 +53,40 @@ signInNav.addEventListener("click", goToLoginScreen);
 let photographyNav = document.getElementById("photographyNav");
 const goToPhotography = () => window.location.assign("photography.html");
 photographyNav.addEventListener("click", goToPhotography);
+
+/*************** Nav Links mobile responsive ***************/
+
+const menuButton = document.getElementsByClassName("mobileNavButton")[0];
+const navBar = document.getElementsByClassName("navHeader");
+var menuVisible = false;
+// const navBar = document.getElementById("rightContainerFixed");
+const hideMenu = (x) => {
+    x.classList.toggle("change");
+    let i;
+    if (menuVisible === true) {
+        for (i = 0; i < 3; i++) {
+            navBar[i].style.visibility = "hidden";
+            navBar[i].style.visibility = "hidden";
+            navBar[i].style.visibility = "hidden";
+            menuVisible = false;
+        }
+    }
+    else if (menuVisible === false) {
+        for (i = 0; i < 3; i++) {
+            navBar[i].style.visibility = "visible";
+            navBar[i].style.visibility = "visible";
+            navBar[i].style.visibility = "visible";
+            menuVisible = true;
+        }
+    }
+    
+    // nav.style.display = "none";
+    // navBar.forEach(navBar => {
+    //     navBar.style.display = "none";
+    //     console.log(navBar);
+    // })
+    // navBar.style.display = "none";
+}
+menuButton.addEventListener("click", hideMenu);
+
+/*************** Menu button animation ***************/
