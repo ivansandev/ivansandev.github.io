@@ -313,6 +313,7 @@ span {
   top: 12em;
   width: 240px;
   font-weight: 400;
+  z-index:1;
 }
 
 #rightContainerFixed #todoContent {
@@ -475,11 +476,11 @@ span {
     display: flex;
     flex-flow: wrap column;
     justify-content: center;
-    position: relative;
-    top: 150px;
+    position: static;
+    margin-top: 170px;
   }
   .alignInSVGContent {
-    position: relative;
+    position: static;
     background-color: #2C7C89;
     margin-bottom: 30px;
     border-radius: 12px;
@@ -501,16 +502,8 @@ span {
     position: fixed;
     top: 0;
   }
-  #sections div {
-    
-  }
-  /* Navbar */
 
-  /*
-  --------------------
-    BUTTON
-  --------------------
-  */
+  /* Navbar */
   .containerMenuButton {
     display: inline-block;
     cursor: pointer;
@@ -526,22 +519,17 @@ span {
     /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.4); */
   }
   
-  .change .bar1 {
+  .buttonAnimation .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
   }
   
-  .change .bar2 {opacity: 0;}
+  .buttonAnimation .bar2 {opacity: 0;}
   
-  .change .bar3 {
+  .buttonAnimation .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
   }
-  /*
-  --------------------
-    BUTTON
-  --------------------
-  */
 
   #rightContainerFixed {
     top: 25px;
@@ -566,16 +554,15 @@ span {
 
   /* Photography */
   .alignImagesCenter {
-    align-content: left;
     width: 100vw;
     height: 70vh;
-    top: 150px;
-    position: relative;
+    top: 200px;
+    align-content: left;
   }
 
   #imagesContainer {
-    display: flex;
-    flex-flow: wrap row;
+    align-content: left;
+    
   }
 
   #imagesContainer a img {

@@ -61,23 +61,25 @@ const navBar = document.getElementsByClassName("navHeader");
 var menuVisible = false;
 // const navBar = document.getElementById("rightContainerFixed");
 const hideMenu = (x) => {
-    x.classList.toggle("change");
+    x.classList.toggle("buttonAnimation");
+    console.log(x);
+    
     let i;
     if (menuVisible === true) {
         for (i = 0; i < 3; i++) {
             navBar[i].style.visibility = "hidden";
             navBar[i].style.visibility = "hidden";
             navBar[i].style.visibility = "hidden";
-            menuVisible = false;
         }
+        menuVisible = false;
     }
     else if (menuVisible === false) {
         for (i = 0; i < 3; i++) {
             navBar[i].style.visibility = "visible";
             navBar[i].style.visibility = "visible";
             navBar[i].style.visibility = "visible";
-            menuVisible = true;
         }
+        menuVisible = true;
     }
     
     // nav.style.display = "none";
