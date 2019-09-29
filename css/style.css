@@ -75,28 +75,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.bgImage {
-  background-image: url("/images/Background.png");
-  opacity: 1;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  /* z-index: -1; */
-  top: 0;
-  left: 0;
-}
-
-.bg {
-  opacity: 0.3;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  /* z-index: -1; */
-  top: 0;
-  left: 0;
+  background-image: url("../images/Background.png");
 }
 
 code {
@@ -139,19 +118,19 @@ span {
 --------------------
 */
 
-#sections {
+#main-container {
   display: flex;
   flex-flow: nowrap row;
   width: 65vw; /* control space between main sections */
   justify-content: space-between;
 }
 
-#sections div svg {
+#main-container div svg {
   width: 300px;
   height: 100%;
 }
 
-#sections div:nth-child(2) svg {
+#main-container div:nth-child(2) svg {
   width: 342px;
   height: 100%;
 }
@@ -470,9 +449,15 @@ span {
   transform: scale(1.07) rotate(5deg);
 }
 
+/*
+--------------------
+  MEDIA QUERIES
+--------------------
+*/
+
 @media all and (max-width: 1200px) {
   /* Sections */
-  #sections {
+  #main-container {
     display: flex;
     flex-flow: wrap column;
     justify-content: center;
